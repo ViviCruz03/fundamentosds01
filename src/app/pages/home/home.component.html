@@ -1,0 +1,37 @@
+<div>
+<h2>Pagina Inicial</h2>
+
+<p>Nombre del alumno:{{ nombre}}</p>
+<p>Nombre en mayusculas:{{nombre | uppercase}}</p>
+<p>Calificación :{{calificacion}}</p>
+<p>Calificación X 10: {{calificacion*10}}</p>
+
+<p></p>
+<!-- imput para caqmbiar el valor de la propiedad nombre-->
+<input type="text" class="from-control" placeholder="Escribe tu nombre"
+[(ngModel)]="nombre"/>
+
+<br><br>
+<!--Boton para mandar llamar el metodo de  cambiar variables-->
+
+<button type="button" class="btn btn-primary" (click)="cambiarValores()">
+    Cambiar valores
+</button>
+
+<br><br>
+<!--Ejemplos de condicionales ngIf-->
+<p *ngIf="encendido">La propiedad encendido esta true</p>
+<p *ngIf="!encendido">La propiedad de encendido esta en false</p>
+<br>
+<p *ngIf="10 > 5">Es verdadero</p>
+
+<br>
+<br>
+<!--Ejemplo de ciclos ngFor-->
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let persona of personas">
+    {{persona}}
+</li>
+</ul>
+</div>
+

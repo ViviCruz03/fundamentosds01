@@ -1,0 +1,10 @@
+<h3>Fotos</h3>
+
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let post of data">
+        <!-- Propiedades de la página web -->
+        <h5>{{post.title}}</h5>
+        <p>{{post.albumId}}</p>
+        <img src={{post.url}} alt="">
+    </li>
+</ul>
